@@ -1,0 +1,57 @@
+{% extends "Parent.html" %}
+{% block body %}
+
+<div class="my-all-blogs">
+
+  <div class="all-blogs">
+    {% for post in api_for_blogs %}
+    <div class="card-blog" style="width: 18rem;">
+      <div class="card-body">
+        <div class="imgc">
+          <img src="{{post.image}}" class="blog-image">
+        </div>
+        <h5 class="card-title">{{ post.title }}</h5>
+        {% comment %} |truncate_chars:50 {% endcomment %}
+        <p class="card-text">{{ post.content}}</p>
+        <!-- Add other card content here -->
+        <a href={{post.id}} class="show-more">Show more</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="blog-right">
+<!-- <h1>He</h1> -->
+<div class="filter">
+  <div class="heading-filter">
+    <h2>Filter blogs</h2>
+  </div>
+  <div class="options">
+    <div class="newblogs">
+      <label for="New blogs">New blogs</label>
+      <input type="checkbox" name="New" id="">
+      <button>Apply</button>
+    </div>
+  </div>
+</div>
+  </div>
+
+</div>
+<div class="pagination">
+  <span class="step-links">
+    {% if api_for_blogs.has_previous %}
+    <a href="?page=1">&laquo; first</a>
+    <a href="?page={{ api_for_blogs.previous_page_number }}">previous</a>
+    {% endif %}
+
+    <span class="current-page">{{ api_for_blogs.number }}</span>
+
+    {% if api_for_blogs.has_next %}
+    <a href="?page={{ api_for_blogs.next_page_number }}">next</a>
+    <a href="?page={{ api_for_blogs.paginator.num_pages }}">last &raquo;</a>
+    {% endif %}
+  </span>
+</div>
+
+
+
+{% endblock body %}

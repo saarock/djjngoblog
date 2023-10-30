@@ -1,0 +1,165 @@
+.singleblogs {
+    /* background-color: red; */
+    /* display: flex; */
+}
+
+.image-main-blog-image {
+    height: 90vh;
+    width: 100%;
+
+}
+
+.image-main-blog-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.blog-single-only {
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+    /* align-items: center; */
+}
+
+.all-single-blogs-start {
+    position: relative;
+    /* height: 33rem; */
+    width: 65%;
+    padding: 1rem;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    /* border: 2px solid black; */
+}
+
+.title-blog {
+    /* background-color: black; */
+    /* width: 60%; */
+    position: relative;
+    /* top: -5rem; */
+    width: 90%;
+
+}
+
+.title-blog h2 {
+    color: black;
+    font-size: 3rem;
+}
+
+.extra {
+    /* background: rgba(43, 48, 43, 0.356); */
+    /* padding: 1rem; */
+}
+
+.extra h3 {
+    color: rgb(121, 112, 112);
+    font-size: 1.4rem;
+
+}
+
+
+.content-title {
+    margin-top: 1rem;
+
+}
+
+.content-title h2 {
+    font-size: 2.3rem;
+}
+
+.para-blog p {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.contentimage {
+    width: 90%;
+}
+
+.contentimage img {
+    width: 100%;
+}
+
+.features h2 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+
+}
+
+.features ul li {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+
+    font-weight: bold;
+}
+
+.howtolearn h2 {
+
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.howtolearn ul li {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+
+    font-weight: bold;
+}
+
+.popular-blog {
+    margin-top: 2rem;
+}
+
+.popular-blog h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: brown;
+}
+
+.new-blogs {
+    /* margin-top: 1rem; */
+}
+
+.right-single-news {
+    background-color: red;
+    width: 22rem;
+    height: 22rem;
+}
+
+.bog-flex-for-comments {
+    display: flex;
+    /* overflow-y: scroll; */
+}
+
+.right-container-for-comments {
+    /* display: flex; */
+    /* background-color: red; */
+    background-color: aliceblue;
+    height: 100vh;
+    width: 40vw;
+    position: sticky;
+    top: 0;
+
+
+}
+
+.blogs-comments-all {
+    overflow-y: scroll;
+    margin-top: 1rem;
+    border-top: 2px solid black;
+}
+
+.comment-div {
+    height: 8rem;
+    background-color: aquamarine;
+    margin: 1em;
+}
+
+.show-all-the-blog-commnets {
+    overflow: scroll;
+    height: 35rem;
+    /* background-color: red; */
+}

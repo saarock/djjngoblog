@@ -1,0 +1,29 @@
+.text-for-move {
+ /* font-size: 2rem; */
+    animation-name: animate;
+    /* position: absolute; */
+    transition: 10s ease-in-out;
+    /* left: 22rem; */
+    animation-iteration-count: infinite;
+    transform: translate(23vh);
+
+
+
+    /* width: 100px; */
+    /* height: 100px; */
+    /* background-color: red; */
+    animation-name: example;
+    animation-duration: 17s;
+    position: relative;
+    
+}
+
+@keyframes example {
+    from {
+    left: 30rem;
+    }
+    to {
+
+        left: -196rem;
+    }
+  }

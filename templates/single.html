@@ -1,0 +1,194 @@
+{% extends "Parent.html" %}
+{% block title %}{% if blog %} {{blog.title}}{% endif %}{% endblock title %}
+{% block body %}
+
+
+<div class="singleblogs">
+    <div class="blog-single-only">
+        <div class="image-main-blog-image">
+            <img src="{{blog.image}}" alt="BlogMainImage">
+
+        </div>
+
+        <div class="bog-flex-for-comments">
+
+
+            <div class="all-single-blogs-start">
+                <div class="title-blog">
+                    <h2>{{blog.title}}</h2>
+                </div>
+                <div class="extra">
+                    <h3>{{blog.extra}}</h3>
+                </div>
+
+                <div class="whowrote-this-blog">
+
+                </div>
+
+                <div class="content-title">
+                    <h2>{{blog.content1_title}}</h2>
+
+                </div>
+
+                <div class="para-blog">
+                    <p>{{blog.content1}}</p>
+                    <p>{{blog.content1_}}</p>
+                </div>
+
+                <div class="content-title">
+                    <h2>{{blog.content2_title}}</h2>
+                </div>
+                <div class="para-blog">
+                    <p>{{blog.content2}}</p>
+                </div>
+                <div class="contentimage">
+                    <img src="{{blog.content2image}}" alt="">
+                </div>
+                <div class="para-blog">
+                    <p>{{blog.content2_}}</p>
+                    <p>{{blog.content2__}}</p>
+                </div>
+
+                <div class="content-title">
+                    <h2>{{blog.content3_title}}</h2>
+                </div>
+
+                <div class="features">
+                    {% for blogs_ in blog.features %}
+                    <h2>{{blogs_.title}}</h2>
+                    <ul>
+                        <li>{{blogs_.content}}</li>
+                    </ul>
+                    {% endfor %}
+                </div>
+
+                <div class="content-title">
+                    <h2>{{blog.content4_title}}</h2>
+                </div>
+                <div class="para-blog">
+                    <p>{{blog.content4}}</p>
+                </div>
+
+
+                <div class="content-title">
+                    <h2>{{blog.content5_title}}</h2>
+                </div>
+                <div class="para-blog">
+                    <p>{{blog.content5}}</p>
+                </div>
+
+
+
+                <div class="howtolearn">
+                    {% for blogs_ in blog.howtolearn %}
+                    <h2>{{blogs_.title}}</h2>
+                    <ul>
+                        <li>{{blogs_.content}}</li>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="right-container-for-comments">
+
+                <div class="blogs-comments-all">
+                    <div class="all-comment-title">
+                        <h2>All the comments:</h2>
+                    </div>
+                    <div class="show-all-the-blog-commnets">
+                        {% for i in allcomments%}
+                        <div class="comment-div">
+
+                            <div class="logo-and-name">
+                                <div class="logo-of-commenter">
+
+                                </div>
+                                <div class="name-and-date">
+                                    <div class="commenter-name">
+                                        <h2>{{i.fullName}}</h2>
+                                    </div>
+
+                                    <div class="date-post">
+                                        <p>{{i.post_date}}</p>
+                                        <p>{{i.comment_id}}</p>
+                                    </div>
+                             
+                                </div>
+                            </div>
+
+                            <div class="comment-of-commenter">
+                                <p>{{i.comment}}</p>
+                            </div>
+                        </div>
+
+
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="title-comments">
+                    <div class="show-title-comments">
+                        <h2>Add Comments:</h2>
+                    </div>
+
+                    <div class="showput-comment">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div class="fullname">
+                                <label for="Fullname">FullName</label>
+                                <input type="text" name="fullname">
+                            </div>
+
+                            <div class="email">
+                                <label for="Email">Email</label>
+                                <input type="email" name="email">
+                            </div>
+
+                            <div class="comment">
+                                <label for="Comment">Comment</label>
+                                <input type="text" name="comment">
+                            </div>
+
+                            <div class="add-comment-button">
+                                <button>Send</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="popular-blog">
+    <h1>Most popular blogs</h1>
+</div>
+<div class="all-blogs new-blogs">
+
+    {% for post in popularblogs %}
+    <div class="card-blog" style="width: 18rem;">
+        <div class="card-body">
+            <div class="imgc">
+                <img src="{{post.image}}" class="blog-image">
+            </div>
+            <h5 class="card-title">{{ post.title }}</h5>
+            {% comment %} |truncate_chars:50 {% endcomment %}
+            <p class="card-text">{{ post.content}}</p>
+            <!-- Add other card content here -->
+            <a href={{post.id}} class="show-more">Show more</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock body %}

@@ -1,0 +1,125 @@
+.my-all-blogs {
+    width: 100%;
+}
+
+.all-blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 5px;
+    width: 100%;
+    /* height: 1009rem; */
+}
+.my-all-blogs {
+    display: flex;
+    border: 2px solid hsl(0, 60%, 24%);
+}
+
+
+
+.all-blogs .card-blog {
+    /* height: 17rem; */
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.3rem;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+    margin-top: 0.5rem;
+
+    /* background-color: hsla(257, 89%, 15%, 0.559); */
+    /* background: rgba(181, 30, 30, 0.5); */
+}
+
+.blog-right {
+    background-color: hsl(0, 60%, 24%);
+    height: 100vh;
+    width: 48vmin;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0.3rem 0.5rem 0 rgb(77, 67, 67);
+    color: white;
+}
+
+.card-blog h5 {
+font-size: 1.2rem;
+}
+
+.card-blog p {
+    /* background-color: red; */
+    --max-lines:3;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+    position: relative;
+
+
+}
+
+.card-blog p::before {
+    content: '';
+    position: absolute;
+    height: 2rem;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, white);
+    /* background-color: red; */
+}
+
+.card-blog img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.card-blog img:hover {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.5);
+    /* width: 100%; */
+}
+
+.card-blog .imgc {
+    height: 8rem;
+    background-color: red;
+    overflow: hidden;
+}
+
+.show-more {
+    /* background-color: hsl(240, 11%, 52%); */
+    display: inline-block;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    border-radius: 2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.3rem;
+    transition: 0.3s ease-in-out;
+    /* margin: 2rem; */
+    /* padding: 2rem; */
+    /*  */
+    /* display: inline-block; */
+}
+
+.show-more::after {
+    content: ">>";
+}
+
+
+
+.show-more:hover {
+    cursor: pointer;
+    /* box-shadow: 0.1rem 0 0rem 0.1rem black; */
+    text-decoration: underline;
+
+
+
+}
+
+

@@ -1,0 +1,154 @@
+header {
+    position: sticky;
+    /* top: 0rem; */
+    /* bottom: 0; */
+    top: 0rem;
+    /* height: 5vh; */
+    z-index: 999;
+}
+
+.navs {
+    /* background-color: red; */
+    display: flex;
+
+    /* Should uncomment */
+    /* justify-content: space-around; */
+    
+}
+
+.navs .navbars {
+    display: flex;
+    /* Should uncomment */
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+
+
+
+.navbars .nav {
+    /* margin: 2rem; */
+    margin-left: 2rem;
+    list-style-type: none;
+    text-align: center;
+    /* background-color: red; */
+    /* text-align: center; */
+}
+
+.nav a {
+    text-decoration: none;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    position: relative;
+    font-weight: bold;
+    color: black;
+
+}
+.nav a::after {
+    content: '';
+    background-color: black;
+    width: 0%;
+    height: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    transition: 0.3s ease-in-out;
+
+}
+
+.nav :hover::after {
+    left: 0rem;
+    height: 4px;
+    bottom: -0.5rem;
+    width: 100%;
+}
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+}
+
+.right .r {
+    text-align: center;
+    margin-left: 1rem;
+
+
+}
+
+
+.logo {
+    height: 3rem;
+    background-color: hsl(0, 50%, 29%);
+    text-align: center;
+    /* position: relative; */
+
+}
+
+
+.dark-mode {
+cursor: pointer;
+position: relative;
+/* background-color: red; */
+}
+.dark {
+    position: relative;
+}
+.dark::after {
+    content: "Darkmode feature";
+    position: absolute;
+    left: 2rem;
+    background-color: black;
+    color: white;
+    bottom: -2rem;
+    z-index: 111;
+    width: 10rem;
+    padding: 0.3rem;
+    text-align: center;
+    border: 2px solid hsl(0, 2%, 74%);
+    /* border: none; */
+    /* border-radius: 0.4rem; */
+    display: none;
+    border-top-right-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    /* background-color: red; */
+    /* bottom: 0rem; */
+    /* bottom: 0.1px; */
+    /* z-index: 1; */
+}
+
+.dark:hover::after {
+    display: block;
+}
+
+.new-bac-navs {
+    transition: 0.3s ease-in-out;
+    background-color:hsl(0, 50%, 63%);
+    /* position: sticky; */
+    /* top: 12rem; */
+    background: rgba(17, 17, 17, 0.968);
+    position: absolute;
+    top: 0;
+    width: 100%;
+       
+
+}
+
+.new-bac-navs .navbars .nav a {
+    color: white;
+}
+ .dark-mode {
+    color: white;
+}
+
+
+.new-bac-navs .navbars .nav:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.mobile-nav {
+    display: none;
+    /* visibility: hidden; */
+}
